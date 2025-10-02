@@ -1,0 +1,49 @@
+.tiles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.hour-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.confirm-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.confirm-button button {
+    background: linear-gradient(135deg, #c7d2fe 0%, #a7f3d0 100%);
+    color: #0b132b;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    padding: 0 36px;
+    height: 72px;
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.confirm-button button:hover {
+    filter: brightness(1.05);
+    transform: translateY(-2px);
+}
+
+.confirm-button button:active {
+    transform: translateY(0);
+}
+
+.date-picker {
+    display: flex;
+    justify-content: flex-end;
+}

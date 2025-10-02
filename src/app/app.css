@@ -1,0 +1,59 @@
+:host {
+  display: block;
+  min-height: 100dvh;
+}
+
+main {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 1rem;
+}
+
+.app-footer {
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.logo {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.app-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 25dvh;
+  text-align: center;
+}
+
+.app-header h1 {
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0;
+  background: linear-gradient(90deg, #1f6702, #3b82f6, #8b5cf6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background-size: 200% auto;
+  animation: shine 6s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}

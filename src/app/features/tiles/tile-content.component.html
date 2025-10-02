@@ -1,0 +1,46 @@
+<form [formGroup]="form" (ngSubmit)="save()">
+    <div class="date-picker">
+        <app-calendar #calendar (dateSelected)="onDateSelected($event)"></app-calendar>
+    </div>
+    <div class="tiles">
+        <app-tile [imgSrc]="'/assets/water.png'" alt="Water" [goalReached]="(form.get('countWater')?.value ?? 0) >= 8">
+            <mat-form-field appearance="outline">
+                <mat-label>Ilość szklanek wody</mat-label>
+                <input matInput formControlName="countWater" type="number" min="0">
+            </mat-form-field>
+        </app-tile>
+        <app-tile [imgSrc]="'/assets/steps.png'" alt="Walk" [goalReached]="(form.get('countSteps')?.value ?? 0) >= 5000">
+            <mat-form-field appearance="outline">
+                <mat-label>Ilość kroków</mat-label>
+                <input matInput formControlName="countSteps" type="number" min="0">
+            </mat-form-field>
+        </app-tile>
+        <app-tile [imgSrc]="'/assets/reading.png'" alt="Read" [goalReached]="(form.get('countPages')?.value ?? 0) >= 100">
+            <mat-form-field appearance="outline">
+                <mat-label>Ilość stron</mat-label>
+                <input matInput formControlName="countPages" type="number" min="0">
+            </mat-form-field>
+        </app-tile>
+        <app-tile [imgSrc]="'/assets/sleep.png'" alt="Sleep" [goalReached]="(form.get('countSleepHour')?.value ?? 0) >= 8">
+            <div class="hour-field">
+                <mat-form-field appearance="outline">
+                    <mat-label>Ilość godzin</mat-label>
+                    <input matInput formControlName="countSleepHour" type="number" min="0" max="24">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Ilość minut</mat-label>
+                    <input matInput formControlName="countSleepMin" type="number" min="0" [max]="(form.get('countSleepHour')?.value ?? 0) === 24 ? 0 : 59">
+                </mat-form-field>
+            </div>
+        </app-tile>
+        <app-tile [imgSrc]="'/assets/work.png'" alt="Work" [goalReached]="(form.get('countWork')?.value ?? 0) >= 8">
+            <mat-form-field appearance="outline">
+                <mat-label>Ilość godzin pracy</mat-label>
+                <input matInput formControlName="countWork" type="number" min="0">
+            </mat-form-field>
+        </app-tile>
+    </div>
+    <div class="confirm-button">
+        <button matFab extended type="submit" [disabled]="form.invalid" (click)="calendar.emitDate()">Potwierdź</button>
+    </div>
+</form>
