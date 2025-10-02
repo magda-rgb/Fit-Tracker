@@ -1,5 +1,5 @@
 # Fit-Tracker
-Prosta aplikacja pozwalająca śledzić codzienne zdrowe nawyki, zbudowana przy pomocy angulara. Użytkownik może wprowadzać parametry dla swoich zdrowych nawyków, np: wypite szklanki wody, ilość snu. Wybierając datę oraz naciskając przycisk potwierdź użytkownik tworzy listę wraz ze statystykami z danych dni.
+Prosta aplikacja pozwalająca śledzić codzienne zdrowe nawyki, zbudowana przy pomocy angulara. Użytkownik może wprowadzać parametry dla swoich zdrowych nawyków, np. wypite szklanki wody, ilość snu. Wybierając datę oraz naciskając przycisk potwierdź użytkownik tworzy listę wraz ze statystykami z danych dni.
 
 ## Uruchamianie
 - Po pobraniu repozytorium, w folderze projektu:
