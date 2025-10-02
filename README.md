@@ -4,9 +4,13 @@ Prosta aplikacja pozwalająca śledzić codzienne zdrowe nawyki, zbudowana przy 
 ## Uruchamianie
 - Po pobraniu repozytorium, w folderze projektu:
 ```bash
+npm install
+```
+- oraz po zainstalowaniu dependencji:
+```bash
 ng serve
 ```
-Następnie aplikacja będzie dostępna pod adresem:
+- Następnie aplikacja będzie dostępna pod adresem:
 ```bash
 localhost:4200
 ```
