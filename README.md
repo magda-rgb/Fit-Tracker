@@ -2,14 +2,12 @@
 Prosta aplikacja pozwalająca śledzić codzienne zdrowe nawyki, zbudowana przy pomocy angulara.
 
 ## Uruchamianie
+- Po pobraniu repozytorium, w folderze projektu:
 ```bash
-docker build -t fit-tracker .
+ng serve
 ```
-Po zbudowaniu dockerimage'u
+Następnie aplikacja będzie dostępna pod adresem:
 ```bash
-docker run -p 8080:80 fit-tracker
+localhost:4200
 ```
-Strona będzie dostępna pod adresem:
-```bash
-localhost:8080
-```
+
